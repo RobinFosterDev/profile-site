@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 const { title = 'Robin Foster' } = Astro.props;
+const year = new Date().getFullYear();
 ---
 <!doctype html>
 <html lang="en">
@@ -20,6 +21,11 @@ const { title = 'Robin Foster' } = Astro.props;
         <a class="hover:text-slate-900" href="/privacy/">Privacy</a>
         <span class="ml-auto text-accent" aria-hidden="true">☾</span>
       </nav>
+      <p class="mt-4">
+        © {year} Robin Foster — typeset on RCServer, an AMD Radeon R9700 home
+        server with a local model as collaborator
+        <span class="text-accent" aria-hidden="true">✦</span>
+      </p>
     </footer>
   </body>
 </html>
