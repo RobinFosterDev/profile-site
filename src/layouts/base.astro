@@ -2,6 +2,7 @@
 import '../styles/global.css';
 const { title = 'Robin Foster' } = Astro.props;
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <!doctype html>
 <html lang="en">
@@ -17,8 +18,8 @@ const year = new Date().getFullYear();
     </main>
     <footer class="mx-auto max-w-2xl px-6 pb-12 text-sm text-ink-faint">
       <nav class="flex items-center gap-4">
-        <a class="hover:text-ink" href="/">Home</a>
-        <a class="hover:text-ink" href="/privacy/">Privacy</a>
+        <a class="hover:text-ink" href={base}>Home</a>
+        <a class="hover:text-ink" href={`${base}privacy/`}>Privacy</a>
         <span class="ml-auto text-accent" aria-hidden="true">☾</span>
       </nav>
       <p class="mt-4">

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/base.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <Base>
   <header class="flex items-center gap-4">
@@ -25,9 +26,9 @@ import Base from '../layouts/base.astro';
   <section class="mt-10">
     <h2 class="font-display text-lg font-semibold">Links <span class="text-accent" aria-hidden="true">✦</span></h2>
     <ul class="mt-3 space-y-2">
-      <li><a class="text-accent hover:underline" href="https://github.com/robinfoster1996">GitHub</a></li>
+      <li><a class="text-accent hover:underline" href="https://github.com/RobinFosterDev">GitHub</a></li>
       <li><a class="text-accent hover:underline" href="mailto:robinfoster1996@gmail.com">robinfoster1996@gmail.com</a></li>
-      <li><a class="text-accent hover:underline" href="/privacy">Privacy Policy</a></li>
+      <li><a class="text-accent hover:underline" href={`${base}privacy/`}>Privacy Policy</a></li>
     </ul>
   </section>
 </Base>
